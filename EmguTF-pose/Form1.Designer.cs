@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmguTF_posewindow));
             this.button_start = new System.Windows.Forms.Button();
             this.imageBox = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).BeginInit();
@@ -51,6 +52,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.imageBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.imageBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imageBox.BackgroundImage")));
+            this.imageBox.InitialImage = null;
             this.imageBox.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Bicubic;
             this.imageBox.Location = new System.Drawing.Point(0, 0);
             this.imageBox.Name = "imageBox";
@@ -63,7 +66,9 @@
             this.ClientSize = new System.Drawing.Size(599, 511);
             this.Controls.Add(this.imageBox);
             this.Controls.Add(this.button_start);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EmguTF_posewindow";
+            this.Text = "JI Pose Detection";
             this.Load += new System.EventHandler(this.EmguTF_posewindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).EndInit();
             this.ResumeLayout(false);
