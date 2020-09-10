@@ -77,7 +77,7 @@ namespace EmguTF_pose
 
             // 2- Our webcam will represent the first camera found on our device
             //m_Webcam = new VideoCapture(0);
-            m_Webcam = new VideoCapture("http://root:onioneer@192.168.3.1:8080/?action=stream",VideoCapture.API.Any);
+            m_Webcam = new VideoCapture("http://root:onioneer@192.168.43.44:8080/?action=stream",VideoCapture.API.Any);
 
             // 3- When the webcam capture (grab) an image, callback on ProcessFrame method
             m_Webcam.ImageGrabbed += new EventHandler(Process); // event based
